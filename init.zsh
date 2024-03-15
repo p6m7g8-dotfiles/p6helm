@@ -28,16 +28,16 @@ p6_helm_prompt_info() {
   local str
 
   if ! p6_string_blank "$KUBECONFIG"; then
-    str="helm:     "
+    str="helm:\t\t  "
   fi
 
   local helm_ctx=${HELM_KUBECONTEXT:-$P6_KUBE_CFG}
   if ! p6_string_blank "$helm_ctx"; then
-    str="${str}ctx=[$helm_ctx]"
+    str="${str}ctx:$helm_ctx"
   fi
   local helm_ns=${HELM_NAMESPACE:-$P6_KUBE_NS}
   if ! p6_string_blank "$helm_ns"; then
-    str="${str} ns=[$helm_ns]"
+    str="${str} ns:$helm_ns"
   fi
 
   if p6_string_blank "$str"; then
