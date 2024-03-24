@@ -15,7 +15,7 @@ p6df::modules::p6helm::deps() {
 ######################################################################
 #<
 #
-# Function: p6_helm_prompt_info()
+# Function: str str = p6_helm_prompt_info()
 #
 #  Returns:
 #	str - str
@@ -40,9 +40,5 @@ p6_helm_prompt_info() {
     str="${str} ns:$helm_ns"
   fi
 
-  if p6_string_blank "$str"; then
-    p6_return_void
-  else
-    p6_return_str "$str"
-  fi
+  p6_return_str "$str"
 }
