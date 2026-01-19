@@ -20,7 +20,7 @@ p6df::modules::p6helm::deps() {
 #  Returns:
 #	str - str
 #
-#  Environment:	 HELM_KUBECONTEXT HELM_NAMESPACE KUBECONFIG
+#  Environment:	 HELM_KUBECONTEXT HELM_NAMESPACE KUBECONFIG P6_KUBE_CFG P6_KUBE_NS
 #>
 ######################################################################
 p6_helm_prompt_info() {
